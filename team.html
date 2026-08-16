@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> أعضاء المجموعة </title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .team-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* تنسيق القائمة لتظهر بشكل مرتب كبطاقات داخلية */
+        #team-list {
+            list-style: none;
+           
+        }
+
+        #team-list li {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            font-size: 19px;
+            color: #0b0b0b;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Smartphone</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="team.html" >أعضاء المجموعة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">فريق عمل المشروع</h2>
+        
+        <div class="team-container">
+            
+            <ul id="team-list">
+                <li>
+                    <p>حسين خالد رشيد البلوي</p>
+                </li>
+
+
+                <li> 
+                    <p>اسامة عبدالله الدعجاني </p>
+                </li>
+                
+                <li >
+                   <p> يوسف محمد الحربي  </p>
+
+                </li>
+            </ul>
+           
+        </div><br>
+    </main>
+
+    <footer>
+         <p> © 2026 Smartphone. كل الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            // 1. الحصول على عنصر القائمة عن طريق الـ ID
+            const list = document.getElementById('team-list');
+            
+            // 2. تحويل عناصر القائمة (li) إلى مصفوفة (Array) للتمكن من ترتيبها
+            const items = Array.from(list.children);
+            
+            // 3. تطبيق خوارزمية الترتيب العشوائي (Shuffle)
+            items.sort(() => Math.random() - 0.5);
+            
+            // 4. تفريغ القائمة الأصلية تماماً
+            list.innerHTML = '';
+            
+            // 5. إعادة إضافة العناصر إلى القائمة بالترتيب العشوائي الجديد
+            items.forEach(item => list.appendChild(item));
+        };
+    </script>
+
+</body>
+</html>

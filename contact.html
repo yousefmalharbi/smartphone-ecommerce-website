@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> تواصل معنا </title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+        }
+        
+        /* تنسيق حقول الإدخال */
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+        }
+        
+        .btn-submit {
+            background-color: #005aad;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer; /* إضافة شكل اليد عند التأشير على الزر */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Smartphone</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+                <li><a href="team.html">أعضاء المجموعة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">تواصل معنا</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: #4a5568;">يسعدنا استقبال استفساراتكم واقتراحاتكم حول خدمات المتجر، سنقوم بالرد عليك في أقرب وقت.</p>
+        
+        <div class="contact-container">
+            <form action="#" method="POST" onsubmit="showSuccessMessage()">
+                
+                <div class="form-group">
+                    <label for="fullname">الاسم الكامل:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="أدخل اسمك الثلاثي" required>
+                </div> <br>
+                
+                <div class="form-group">
+                    <label for="user-email">البريد الإلكتروني:</label>
+                    <input type="email" id="user-email" name="user-email" placeholder="example@domain.com" required>
+                </div><br>
+                
+                <div class="form-group">
+                    <label for="phone-num">رقم الجوال:</label>
+                    <input type="tel" id="phone-num" name="phone-num" pattern="05[0-9]{8}" placeholder="05xxxxxxxx" title="يجب أن يبدأ رقم الجوال بـ 05 ويتكون من 10 أرقام" required>
+                </div> <br>
+                
+                <div class="form-group">
+                    <label for="reason">سبب التواصل:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">-- اختر سبب التواصل --</option>
+                        <option value="support">الدعم الفني والصيانة</option>
+                        <option value="sales">استفسار عن الشراء والأسعار</option>
+                        <option value="complaint">تقديم شكوى أو اقتراح</option>
+                    </select>
+                </div> <br>
+                
+                <div class="form-group">
+                    <label for="message">نص الرسالة:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="اكتب تفاصيل رسالتك هنا..." required></textarea>
+                </div> <br>
+                
+                <button type="submit" class="btn-submit">إرسال الرسالة</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p> © 2026 Smartphone. كل الحقوق محفوظة</p>
+    </footer>
+
+<script> 
+    function showSuccessMessage() {
+        alert('تم إرسال البيانات بنجاح!');
+    }
+</script>
+
+</body>
+</html>

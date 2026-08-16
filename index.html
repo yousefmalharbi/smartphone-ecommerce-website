@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الرئيسية </title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* تنسيق خاص بالبنر الترحيبي فقط في هذه الصفحة */
+        .hero-banner {
+            background-color: #f0f4f8;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .hero-banner h2 {
+            color: #1a365d;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* التنسيق الخاص بالفيديو لضمان التجاوب والمظهر الأنيق */
+        .video-container {
+            margin-top: 25px; /* مسافة بين النص والفيديو */
+            width: 100%;
+            max-width: 900px; /* أقصى عرض للفيديو على الشاشات الكبيرة */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .video-container video {
+            width: 100%; /* ليتصغر الفيديو تلقائياً مع الهواتف الذكية */
+            height: auto;
+            border-radius: 12px; /* زوايا منحنية حديثة */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ظل خفيف */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1> Smartphone </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="team.html">أعضاء المجموعة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- البنر الترحيبي ويحتوي على الفيديو من مجلد img -->
+    <section class="hero-banner">
+        <h2> عش المستقبل مع أحدث الهواتف الذكية </h2>
+        <p>اكتشف عروضنا الحصرية على هدايا ومستلزمات الهواتف مع شحن سريع.</p>
+
+        <!-- منطقة الفيديو بعد تعديل المسار -->
+        <div class="video-container">
+            <video autoplay muted loop  >
+                <source src="img/v1.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو الحالي.
+            </video>
+        </div>
+    </section>
+
+    <!-- عنصر main مستقل لعرض محتوى الصفحة الرئيسي (المنتجات) -->
+    <main class="container">
+        <h2 class="section-title">منتجاتنا </h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image"><img src="img/phone6.webp" alt="iPhone 15 Pro"></div>
+                <h3>iPhone 17 Pro</h3>
+                <p class="price">5,200 ر.س</p>
+                 <div class="box">
+                <button class="btn-buy" onclick="showSuccessMessage()">طلب</button>
+                 <a href="iPhone17 Pro.html" class="btn-details">التفاصيل</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="img/phone5.webp" alt="Samsung S24"></div>
+                <h3>Apple iPhone 15</h3>
+                <p class="price">3,200 ر.س</p>
+                <div class="box">
+                <button class="btn-buy" onclick="showSuccessMessage()">طلب</button>
+                 <a href="Apple iPhone 15.html" class="btn-details">التفاصيل</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="img/phone1.jpg" alt="iPhone Air"></div>
+                <h3>iPhone Air </h3>
+                <p class="price">4,699 ر.س</p>
+                <div class="box">
+                <button class="btn-buy" onclick="showSuccessMessage()">طلب</button>
+                 <a href="iPhone Air.html" class="btn-details">التفاصيل</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="img/phone2.webp" alt="Google Pixel 8"></div>
+                <h3>Samsung Galaxy S26 Ultra</h3>
+                <p class="price">5,300 ر.س</p>
+                 <div class="box">
+                <button class="btn-buy" onclick="showSuccessMessage()">طلب</button>
+                 <a href="Galaxy S26.html" class="btn-details">التفاصيل</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="img/phone3.webp" alt="OnePlus 12"></div>
+                <h3>Samsung Galaxy S25</h3>
+                <p class="price">3,800 ر.س</p>
+                 <div class="box">
+                <button class="btn-buy" onclick="showSuccessMessage()">طلب</button>
+                 <a href="Samsung Galaxy S25.html" class="btn-details">التفاصيل</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="img/phone4.webp" alt="Huawei P60"></div>
+                <h3>Samsung Galaxy S22</h3>
+                <p class="price">4,900 ر.س</p>
+                <div class="box">
+                <button class="btn-buy" onclick="showSuccessMessage()">طلب</button>
+                 <a href="Samsung Galaxy S22.html" class="btn-details">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p> © 2026 Smartphone. كل الحقوق محفوظة</p>
+    </footer>
+<script>
+    // هنا عشان وقت اخلص تعبية و اضغط على ارسال بعد ما اعبي النموذج تظهر الرسالة ذي
+    function showSuccessMessage() {
+        alert('تم الطلب بنجاح!');
+    }
+</script>
+</body>
+</html>
